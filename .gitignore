@@ -28,3 +28,6 @@ yarn-error.log*
 # CSV / JSON export (ถ้าไม่อยากเก็บใน Git)
 certificates.csv
 certificates.json
+
+# js
+**/*.js
