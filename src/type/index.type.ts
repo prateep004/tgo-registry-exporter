@@ -36,3 +36,7 @@ export interface ICsvExportRow {
     file_names: string;
 }
 
+export interface ResponseApi {
+    data: ICertificateData[]
+}
+

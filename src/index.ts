@@ -1,12 +1,12 @@
 import axios from 'axios';
 import * as fs from 'fs';
-import { ICertificateData } from './type/index.type'
+import { ICertificateData,ResponseApi } from './type/index.type'
 
 
 // ✅ ดึงข้อมูลจาก TGO Registry ทีละหน้า
 async function fetchPage(page: number, limit: number): Promise<ICertificateData[]> {
     const url = `https://api.registry.tgo.or.th/api/v1/home?page=${page}&limit=${limit}&sort=-1,-1&sort_by=registration_date,project_id`;
-    const res = await axios.get<{ data: ICertificateData[] }>(url);
+    const res = await axios.get<ResponseApi>(url);
     return res.data.data;
 }
 
